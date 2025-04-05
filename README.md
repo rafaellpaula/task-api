@@ -11,13 +11,16 @@ API simples criada com Node.js, Express e TypeScript, com integração a banco d
 - [ts-node-dev](https://github.com/wclr/ts-node-dev)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
 
-## 🚀 Funcionalidades (em desenvolvimento)
+## 🚀 Funcionalidades
 
 - [x] Setup inicial com Express + TypeScript
-- [ ] Integração com MySQL
-- [ ] CRUD de tarefas
-- [ ] Middleware de tratamento de erros
-- [ ] Validação de dados
+- [x] Conexão com banco de dados MySQL
+- [x] Listagem de tarefas (`GET /tasks`)
+- [x] Criação de tarefas (`POST /tasks`)
+- [x] Buscar tarefa por ID (`GET /tasks/:id`)
+- [x] Atualização de tarefa (`PUT /tasks/:id`)
+- [x] Remoção de tarefa (`DELETE /tasks/:id`)
+
 
 ## ⚙️ Como rodar o projeto localmente
 
