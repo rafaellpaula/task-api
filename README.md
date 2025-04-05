@@ -1,6 +1,12 @@
-# Task API
+# 📌 Task API
 
-API simples criada com Node.js, Express e TypeScript, com integração a banco de dados MySQL. O objetivo do projeto é consolidar boas práticas de desenvolvimento backend utilizando tecnologias modernas.
+API RESTful para gerenciamento de tarefas (CRUD) desenvolvida com Node.js, Express, TypeScript e MySQL. O projeto foi deployado na nuvem com Railway (backend + banco de dados).
+
+## 🚀 Deploy
+
+✅ API online: [https://task-api-production-aca3.up.railway.app](https://task-api-production-aca3.up.railway.app)
+
+---
 
 ## ✨ Tecnologias utilizadas
 
@@ -10,31 +16,23 @@ API simples criada com Node.js, Express e TypeScript, com integração a banco d
 - [MySQL](https://www.mysql.com/)
 - [ts-node-dev](https://github.com/wclr/ts-node-dev)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Railway](https://railway.app/) – deploy da API e do banco
 
-## 🚀 Funcionalidades
+---
 
-- [x] Setup inicial com Express + TypeScript
-- [x] Conexão com banco de dados MySQL
-- [x] Listagem de tarefas (`GET /tasks`)
-- [x] Criação de tarefas (`POST /tasks`)
-- [x] Buscar tarefa por ID (`GET /tasks/:id`)
-- [x] Atualização de tarefa (`PUT /tasks/:id`)
-- [x] Remoção de tarefa (`DELETE /tasks/:id`)
+## 📄 Endpoints disponíveis
 
+### `GET /tasks`
+Retorna todas as tarefas.
 
-## ⚙️ Como rodar o projeto localmente
+### `GET /tasks/:id`
+Retorna uma tarefa específica pelo ID.
 
-```bash
-# Clone o repositório
-git clone https://github.com/rafaellpaula/task-api.git
-
-# Acesse a pasta
-cd task-api
-
-# Instale as dependências
-npm install
-
-# Crie um arquivo .env baseado no exemplo (.env.example)
-
-# Inicie o servidor em modo desenvolvimento
-npm run dev
+### `POST /tasks`
+Cria uma nova tarefa.  
+**Body (JSON):**
+```json
+{
+  "title": "Tarefa exemplo",
+  "description": "Descrição da tarefa"
+}
